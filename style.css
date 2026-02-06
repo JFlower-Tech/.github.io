@@ -27,7 +27,7 @@ a, button, .btn, .nav-links a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -10; /* Changed to -10 to ensure it's ALWAYS behind everything */
     pointer-events: none;
     overflow: hidden;
 }
@@ -36,8 +36,7 @@ a, button, .btn, .nav-links a {
     position: absolute;
     width: 100px;
     height: 100px;
-    transition: none;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.8));
+    transition: all 1s ease-in-out; /* Added for smooth morphing */
 }
 
 .bouncing-shape.cube {
