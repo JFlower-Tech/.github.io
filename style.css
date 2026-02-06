@@ -10,11 +10,14 @@ body {
     font-family: 'VT323', monospace;
     font-size: 20px;
     line-height: 1.6;
-    color: #000;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
-    background: #000;
+    cursor: default;
+}
+
+a, button, .btn, .nav-links a {
+    cursor: pointer;
 }
 
 /* ========== BOUNCING SHAPES ========== */
