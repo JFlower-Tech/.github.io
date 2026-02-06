@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JFlower-Tech - Portfolio</title>
+    <title>JFlower-Tech - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,116 +12,68 @@
         <div class="nav-container">
             <div class="logo">JFlower-Tech</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="typewriter">
-            <h1>> Hello, I'm JFlower-Tech (Javier Flores-Rendon)_</h1>
-        </div>
-        <p class="subtitle">Aspiring Software Engineer | Building Projects | Learning to Code</p>
-    </section>
+    <!-- Floating Background Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>// About Me</h2>
-        <div class="terminal-box">
-            <p>> Initializing profile...</p>
-            <p>> Loading background...</p>
-            <p class="terminal-content">
-                This is my first exposure into the tech field and this website will allow me  
-                showcase my coding skills by building real projects and documenting my progress.
-            </p>
-            <p>> Profile loaded successfully.</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>// Skills & Technologies</h2>
-        <div class="terminal-box">
-            <p>> Running skills_check.exe...</p>
-            <ul class="skills-list">
-                <li><span class="prompt">$</span> HTML & CSS</li>
-                <li><span class="prompt">$</span> JavaScript</li>
-                <li><span class="prompt">$</span> React [Learning...]</li>
-                <li><span class="prompt">$</span> Git & GitHub</li>
-                <li><span class="prompt">$</span> Node.js [Coming Soon...]</li>
-            </ul>
-            <p>> Skills inventory complete.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>// Projects</h2>
-        <div class="terminal-box">
-            <p>> Listing project directory...</p>
-            <div class="project-item">
-                <h3>► Portfolio Website</h3>
-                <p class="project-description">
-                    This website! Built from scratch to showcase my learning journey.
-                </p>
-                <p class="project-tech">Tech: HTML, CSS, JavaScript</p>
-                <p class="project-links">
-                    <a href="https://github.com/JFlower-Tech/JFlower-Tech.github.io" target="_blank">[View Code]</a>
-                    <a href="https://jflower-tech.github.io" target="_blank">[Live Demo]</a>
-                </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="typewriter-container">
+                <h1 id="typewriter-text"></h1>
+                <span class="cursor">_</span>
             </div>
+            <p class="subtitle fade-in">Aspiring Software Engineer</p>
+            <p class="subtitle-secondary fade-in-delay">Building Projects • Learning to Code • Chasing Dreams</p>
             
-            <div class="project-item">
-                <h3>► Project Coming Soon...</h3>
-                <p class="project-description">
-                    Next project in development.
-                </p>
-                <p class="project-tech">Tech: TBD</p>
+            <div class="cta-buttons fade-in-delay-2">
+                <a href="projects.html" class="btn btn-primary">View My Work</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
             </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow-down"></div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>// Contact & Links</h2>
-        <div class="terminal-box">
-            <p>> Fetching contact information...</p>
-            <div class="contact-links">
-                <p><span class="prompt">$</span> GitHub: <a href="https://github.com/JFlower-Tech" target="_blank">@JFlower-Tech</a></p>
-                <p><span class="prompt">$</span> Email: <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a></p>
-                <p><span class="prompt">$</span> LinkedIn: <a href="www.linkedin.com/in/javier-flores-rendon-437a43194" target="_blank">Javier Flores-Rendon</a></p>
-            </div>
-            <p>> Connection established.</p>
+    <!-- Quick Intro Section -->
+    <section class="quick-intro">
+        <div class="terminal-box slide-up">
+            <p class="terminal-line">> System initialized...</p>
+            <p class="terminal-line">> Loading profile: JFlower-Tech</p>
+            <p class="terminal-line">> Status: <span class="highlight">Available for opportunities</span></p>
+            <br>
+            <p class="terminal-content">
+                Welcome to my digital portfolio. I'm on a journey to becoming a software engineer,
+                building real projects and documenting every step. Each line of code is a step forward.
+            </p>
+            <br>
+            <p class="terminal-line">> <a href="about.html" class="inline-link">Learn more about me →</a></p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 JFlower-Tech | Built while learning to code | Last updated: <span id="last-updated"></span></p>
+        <p>© 2026 JFlower-Tech | Crafted with code and determination</p>
+        <p class="footer-date">Last updated: <span id="last-updated"></span></p>
     </footer>
 
-    <script>
-        // Display current date
-        document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
