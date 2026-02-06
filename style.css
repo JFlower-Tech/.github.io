@@ -1283,63 +1283,467 @@ footer {
     }
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE DESIGN - IMPROVED ========== */
+
+/* Tablets and smaller (768px and below) */
 @media (max-width: 768px) {
+    /* Navigation adjustments */
     .nav-links {
-        gap: 8px;
+        gap: 6px;
     }
     
     .nav-links a {
-        padding: 8px 12px;
-        font-size: 0.5em;
+        padding: 8px 10px;
+        font-size: 0.65em;
+        border-width: 3px;
     }
     
     .logo {
+        font-size: 1.1em;
+    }
+    
+    /* Hero content - reduce shadows for mobile */
+    .hero-content {
+        padding: 30px 20px;
+        border-width: 6px;
+    }
+    
+    body:not(.about-page):not(.projects-page):not(.skills-page):not(.contact-page) .hero-content {
+        box-shadow: 
+            0 0 0 3px #fff,
+            0 0 0 9px #667eea,
+            10px 10px 0 9px rgba(102, 126, 234, 0.3);
+    }
+    
+    body.about-page .hero-content {
+        box-shadow: 
+            0 0 0 6px #f5e6d3,
+            0 0 0 12px #8b4513,
+            8px 8px 0 12px rgba(139, 69, 19, 0.3);
+    }
+    
+    body.projects-page .hero-content {
+        box-shadow: 
+            0 0 0 2px #000,
+            0 0 0 5px #00ff41,
+            0 0 20px rgba(0, 255, 65, 0.4);
+    }
+    
+    body.skills-page .hero-content {
+        box-shadow: 
+            0 0 0 4px #0f3460,
+            0 0 0 12px #e94560,
+            inset 0 0 30px rgba(233, 69, 96, 0.2);
+    }
+    
+    body.contact-page .hero-content {
+        box-shadow: 
+            0 0 0 2px #ff00ff,
+            0 0 0 6px #00ffff,
+            0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    
+    /* Text sizes */
+    .typewriter-container h1 {
+        font-size: 1.8em;
+    }
+    
+    body.skills-page .typewriter-container h1 {
+        font-size: 1.4em;
+    }
+    
+    .subtitle {
         font-size: 1.2em;
     }
     
-    .typewriter-container h1 {
-        font-size: 2em;
+    .subtitle-secondary {
+        font-size: 1em;
     }
     
     .page-title {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
     
-    .hero-content {
-        padding: 30px;
-        border: 8px solid #000;
-        box-shadow: 
-            0 0 0 4px #ff00ff,
-            0 0 0 8px #000,
-            10px 10px 0 8px #00ffff;
+    body.skills-page .page-title {
+        font-size: 1.6em;
     }
     
+    .page-subtitle {
+        font-size: 1.1em;
+    }
+    
+    /* Content sections */
+    .content-section,
+    .quick-intro {
+        padding: 40px 20px;
+    }
+    
+    /* Terminal boxes */
+    .terminal-box {
+        padding: 20px;
+        border-width: 4px;
+    }
+    
+    .terminal-box::before {
+        font-size: 0.5em;
+        padding: 4px 12px;
+        border-width: 3px;
+    }
+    
+    /* Buttons - full width on mobile */
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1em;
+    }
+    
+    /* Reduce bouncing shapes size */
     .bouncing-shape {
         width: 60px;
         height: 60px;
     }
     
+    .bouncing-shape.pyramid {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 55px solid #00ffff;
+    }
+    
+    .bouncing-shape.disc {
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* Contact grid - single column */
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-info,
+    .quick-links {
+        padding: 25px;
+    }
+    
+    /* Projects */
+    .project-card {
+        padding: 25px 20px;
+    }
+    
+    .project-number {
+        font-size: 0.9em;
+        padding: 6px 15px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.5em;
+    }
+    
+    /* Skills */
+    .skill-category {
+        padding: 25px 20px;
+    }
+    
+    .skill-bar {
+        height: 28px;
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding: 25px 20px;
+    }
+    
+    /* CTA boxes */
+    .cta-box {
+        padding: 30px 20px;
+    }
+    
+    .cta-box p {
+        font-size: 1.2em;
     }
 }
 
+/* Small phones (480px and below) */
 @media (max-width: 480px) {
+    /* Stack navigation vertically */
     .nav-container {
         flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 1em;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .nav-links a {
+        padding: 6px 8px;
+        font-size: 0.55em;
+    }
+    
+    /* Smaller hero text */
+    .typewriter-container h1 {
+        font-size: 1.4em;
+    }
+    
+    body.skills-page .typewriter-container h1 {
+        font-size: 1.1em;
+    }
+    
+    .cursor {
+        font-size: 1.4em;
+    }
+    
+    body.skills-page .cursor {
+        font-size: 1.1em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .subtitle-secondary {
+        font-size: 0.9em;
+    }
+    
+    /* Page headers */
+    .page-header {
+        padding: 110px 15px 50px;
+    }
+    
+    .page-title {
+        font-size: 1.8em;
+    }
+    
+    body.skills-page .page-title {
+        font-size: 1.4em;
+    }
+    
+    .page-subtitle {
+        font-size: 0.95em;
+    }
+    
+    /* Hero content */
+    .hero-content {
+        padding: 25px 15px;
+        margin: 0 10px;
+    }
+    
+    /* Content */
+    .content-section,
+    .quick-intro {
+        padding: 30px 15px;
+    }
+    
+    /* Terminal boxes */
+    .terminal-box {
+        padding: 18px;
+        margin: 25px 0;
+    }
+    
+    .terminal-content,
+    .terminal-line {
+        font-size: 1em;
+    }
+    
+    /* Projects */
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .project-number {
+        font-size: 0.7em;
+        padding: 5px 12px;
+        top: -15px;
+        left: 15px;
+    }
+    
+    .project-tech {
+        gap: 8px;
+    }
+    
+    .tech-tag {
+        font-size: 0.85em;
+        padding: 4px 12px;
+    }
+    
+    .project-links {
+        flex-direction: column;
         gap: 12px;
+    }
+    
+    .project-link {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    
+    /* Skills */
+    .skill-category {
+        padding: 20px 15px;
+    }
+    
+    .skill-category h2 {
+        font-size: 1.4em;
+    }
+    
+    .skill-bar {
+        height: 25px;
+    }
+    
+    /* Contact */
+    .contact-info,
+    .quick-links {
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        font-size: 2.2em;
+    }
+    
+    .contact-details h3 {
+        font-size: 1.1em;
+    }
+    
+    .contact-details a {
+        font-size: 1em;
+    }
+    
+    .availability-box {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .status-indicator {
+        width: 30px;
+        height: 30px;
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding: 20px 15px;
+    }
+    
+    .timeline h2 {
+        font-size: 1.5em;
+    }
+    
+    .timeline-item {
+        gap: 15px;
+    }
+    
+    /* About content */
+    .about-content h2 {
+        font-size: 1.6em;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.9em;
+    }
+    
+    /* CTA boxes */
+    .cta-box {
+        padding: 25px 15px;
+    }
+    
+    .cta-box p {
+        font-size: 1.1em;
+    }
+    
+    /* Reduce shapes even more on tiny screens */
+    .bouncing-shape {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .bouncing-shape.pyramid {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 45px solid #00ffff;
+    }
+    
+    .bouncing-shape.disc {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 15px;
+        font-size: 0.95em;
+    }
+}
+
+/* Very small phones (360px and below) */
+@media (max-width: 360px) {
+    .typewriter-container h1 {
+        font-size: 1.2em;
+    }
+    
+    body.skills-page .typewriter-container h1 {
+        font-size: 1em;
+    }
+    
+    .nav-links a {
+        padding: 5px 6px;
+        font-size: 0.5em;
+    }
+    
+    .page-title {
+        font-size: 1.5em;
+    }
+    
+    body.skills-page .page-title {
+        font-size: 1.2em;
+    }
+    
+    /* Hide some decorative elements on very small screens */
+    body::before,
+    body::after {
+        display: none;
+    }
+    
+    /* Keep only 3 shapes on very small screens */
+    .bouncing-shape:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* Landscape orientation on phones */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        padding: 20px;
     }
     
     .typewriter-container h1 {
         font-size: 1.5em;
     }
     
-    .page-title {
-        font-size: 2em;
-    }
-    
-    .content-section {
-        padding: 30px 20px;
+    .page-header {
+        padding: 100px 20px 40px;
     }
 }
